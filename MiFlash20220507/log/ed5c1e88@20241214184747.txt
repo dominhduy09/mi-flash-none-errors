@@ -1,0 +1,267 @@
+[2024-12-14 18:47:47:666:666484  ed5c1e88]:MiFlash 2022.5.7.0
+[2024-12-14 18:47:47:667:667498  ed5c1e88]:vboytest index:1
+[2024-12-14 18:47:47:675:675961  ed5c1e88]:Thread id:10 Thread name:
+[2024-12-14 18:47:47:677:677281  ed5c1e88]:image path:C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom
+[2024-12-14 18:47:47:677:677281  ed5c1e88]:env android path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Google\Android"
+[2024-12-14 18:47:47:677:677281  ed5c1e88]:script :C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\flash_all.bat
+[2024-12-14 18:47:47:690:690951  ed5c1e88]:Physical Memory Usage:3444736 Byte
+[2024-12-14 18:47:47:690:690951  ed5c1e88]:start process id 1216 name cmd
+[2024-12-14 18:47:47:737:737420  ed5c1e88]:info1:$fastboot -s ed5c1e88 getvar product   2>&1  | findstr /r /c:"^product: *nuwa"   || echo Missmatching image and device 
+[2024-12-14 18:47:47:780:780498  ed5c1e88]:info1:product: nuwa
+[2024-12-14 18:47:47:783:783504  ed5c1e88]:info1:$fastboot -s ed5c1e88 getvar product   2>&1  | findstr /r /c:"^product: *nuwa"   || exit /B 1 
+[2024-12-14 18:47:47:814:814512  ed5c1e88]:info1:product: nuwa
+[2024-12-14 18:47:47:817:817580  ed5c1e88]:info1:$if exist "C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images\anti_version.txt" (for /F "usebackq" %a in ("C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images\anti_version.txt") do (set CURRENT_ANTI_VER=%a ) ) 
+[2024-12-14 18:47:47:817:817580  ed5c1e88]:info1:$(set CURRENT_ANTI_VER=1 ) 
+[2024-12-14 18:47:47:817:817580  ed5c1e88]:info1:$if [1] EQU [] set CURRENT_ANTI_VER=0 
+[2024-12-14 18:47:47:818:818591  ed5c1e88]:info1:$for /F "tokens=2 delims=: " %i in ('fastboot -s ed5c1e88 getvar anti 2>&1 | findstr /r /c:"anti:"') do (set version=%i ) 
+[2024-12-14 18:47:47:871:871480  ed5c1e88]:info1:$(set version=1 ) 
+[2024-12-14 18:47:47:871:871480  ed5c1e88]:info1:$if [1] EQU [] set version=0 
+[2024-12-14 18:47:47:872:872513  ed5c1e88]:info1:$set anticheck="antirollback check pass" 
+[2024-12-14 18:47:47:872:872513  ed5c1e88]:info1:$if 1 GTR 1 set anticheck="Current device antirollback version is greater than this pakcage" 
+[2024-12-14 18:47:47:872:872513  ed5c1e88]:info1:$echo "antirollback check pass"   | findstr /r /c:"pass"   || 
+[2024-12-14 18:47:47:891:891044  ed5c1e88]:info1:"antirollback check pass" 
+[2024-12-14 18:47:47:893:893069  ed5c1e88]:info1:$fastboot -s ed5c1e88 getvar crc   2>&1  | findstr /r /c:"^crc: 1" 
+[2024-12-14 18:47:47:928:928931  ed5c1e88]:info1:crc: 1
+[2024-12-14 18:47:47:933:933101  ed5c1e88]:info1:$if 0 EQU 0 (
+[2024-12-14 18:47:47:934:934103  ed5c1e88]:info1:fastboot -s ed5c1e88 flash crclist C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images\crclist.txt   ||  
+[2024-12-14 18:47:47:934:934103  ed5c1e88]:info1: fastboot -s ed5c1e88 flash sparsecrclist C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images\sparsecrclist.txt   || 
+[2024-12-14 18:47:47:934:934103  ed5c1e88]:info1:) 
+[2024-12-14 18:47:47:982:982116  ed5c1e88]:info2:Sending 'crclist' (0 KB)                           OKAY [  0.002s]
+[2024-12-14 18:47:47:985:985744  ed5c1e88]:info2:Writing 'crclist'                                  OKAY [  0.004s]
+[2024-12-14 18:47:47:985:985744  ed5c1e88]:info2:Finished. Total time: 0.027s
+[2024-12-14 18:47:48:027:027105  ed5c1e88]:info2:Sending 'sparsecrclist' (0 KB)                     OKAY [  0.001s]
+[2024-12-14 18:47:48:029:029137  ed5c1e88]:info2:Writing 'sparsecrclist'                            OKAY [  0.002s]
+[2024-12-14 18:47:48:029:029137  ed5c1e88]:info2:Finished. Total time: 0.020s
+[2024-12-14 18:47:48:032:032163  ed5c1e88]:info1:$fastboot -s ed5c1e88 getvar partition-type:opcust   2>&1  | findstr /r /c:"^partition-type:opcust: raw" 
+[2024-12-14 18:47:48:067:067902  ed5c1e88]:info1:$if 1 EQU 0 (fastboot -s ed5c1e88 erase opcust   || ) 
+[2024-12-14 18:47:48:067:067902  ed5c1e88]:info1:$fastboot -s ed5c1e88 getvar partition-type:opconfig   2>&1  | findstr /r /c:"^partition-type:opconfig: raw" 
+[2024-12-14 18:47:48:098:098994  ed5c1e88]:info1:partition-type:opconfig: raw
+[2024-12-14 18:47:48:101:101232  ed5c1e88]:info1:$if 0 EQU 0 (fastboot -s ed5c1e88 erase opconfig   || ) 
+[2024-12-14 18:47:48:234:234615  ed5c1e88]:info2:Erasing 'opconfig'                                 OKAY [  0.097s]
+[2024-12-14 18:47:48:234:234615  ed5c1e88]:info2:Finished. Total time: 0.110s
+[2024-12-14 18:47:48:237:237630  ed5c1e88]:info1:$fastboot -s ed5c1e88 erase boot_ab   || 
+[2024-12-14 18:47:48:348:348491  ed5c1e88]:info2:Erasing 'boot_ab'                                  (bootloader) Partition boot_a erase successfully
+[2024-12-14 18:47:48:416:416674  ed5c1e88]:info2:(bootloader) Partition boot_b erase successfully
+[2024-12-14 18:47:48:416:416674  ed5c1e88]:info2:OKAY [  0.144s]
+[2024-12-14 18:47:48:416:416674  ed5c1e88]:info2:Finished. Total time: 0.155s
+[2024-12-14 18:47:48:420:420247  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash abl_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/abl.elf   || 
+[2024-12-14 18:47:48:468:468315  ed5c1e88]:info2:Sending 'abl_ab' (227 KB)                          OKAY [  0.008s]
+[2024-12-14 18:47:48:478:478698  ed5c1e88]:info2:Writing 'abl_ab'                                   (bootloader) Partition abl_a flashed successfully
+[2024-12-14 18:47:48:479:479462  ed5c1e88]:info2:(bootloader) Partition abl_b flashed successfully
+[2024-12-14 18:47:48:479:479462  ed5c1e88]:info2:OKAY [  0.011s]
+[2024-12-14 18:47:48:479:479462  ed5c1e88]:info2:Finished. Total time: 0.035s
+[2024-12-14 18:47:48:484:484960  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash xbl_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/xbl_s.melf   || 
+[2024-12-14 18:47:48:557:557275  ed5c1e88]:info2:Sending 'xbl_ab' (1170 KB)                         OKAY [  0.032s]
+[2024-12-14 18:47:48:605:605888  ed5c1e88]:info2:Writing 'xbl_ab'                                   (bootloader) Partition xbl_a flashed successfully
+[2024-12-14 18:47:48:608:608656  ed5c1e88]:info2:(bootloader) Partition xbl_b flashed successfully
+[2024-12-14 18:47:48:608:608656  ed5c1e88]:info2:OKAY [  0.051s]
+[2024-12-14 18:47:48:608:608656  ed5c1e88]:info2:Finished. Total time: 0.100s
+[2024-12-14 18:47:48:611:611667  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash xbl_config_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/xbl_config.elf   || 
+[2024-12-14 18:47:48:659:659119  ed5c1e88]:info2:Sending 'xbl_config_ab' (180 KB)                   OKAY [  0.005s]
+[2024-12-14 18:47:48:668:668844  ed5c1e88]:info2:Writing 'xbl_config_ab'                            (bootloader) Partition xbl_config_a flashed successfully
+[2024-12-14 18:47:48:670:670333  ed5c1e88]:info2:(bootloader) Partition xbl_config_b flashed successfully
+[2024-12-14 18:47:48:670:670333  ed5c1e88]:info2:OKAY [  0.011s]
+[2024-12-14 18:47:48:670:670333  ed5c1e88]:info2:Finished. Total time: 0.035s
+[2024-12-14 18:47:48:673:673436  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash shrm_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/shrm.elf   || 
+[2024-12-14 18:47:48:716:716749  ed5c1e88]:info2:Sending 'shrm_ab' (62 KB)                          OKAY [  0.002s]
+[2024-12-14 18:47:48:720:720160  ed5c1e88]:info2:Writing 'shrm_ab'                                  (bootloader) Partition shrm_a flashed successfully
+[2024-12-14 18:47:48:721:721130  ed5c1e88]:info2:(bootloader) Partition shrm_b flashed successfully
+[2024-12-14 18:47:48:721:721130  ed5c1e88]:info2:OKAY [  0.005s]
+[2024-12-14 18:47:48:721:721130  ed5c1e88]:info2:Finished. Total time: 0.024s
+[2024-12-14 18:47:48:726:726136  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash aop_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/aop.mbn   || 
+[2024-12-14 18:47:48:776:776111  ed5c1e88]:info2:Sending 'aop_ab' (272 KB)                          OKAY [  0.010s]
+[2024-12-14 18:47:48:788:788891  ed5c1e88]:info2:Writing 'aop_ab'                                   (bootloader) Partition aop_a flashed successfully
+[2024-12-14 18:47:48:788:788891  ed5c1e88]:info2:(bootloader) Partition aop_b flashed successfully
+[2024-12-14 18:47:48:789:789906  ed5c1e88]:info2:OKAY [  0.013s]
+[2024-12-14 18:47:48:789:789906  ed5c1e88]:info2:Finished. Total time: 0.042s
+[2024-12-14 18:47:48:792:792906  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash aop_config_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/aop_devcfg.mbn   || 
+[2024-12-14 18:47:48:835:835342  ed5c1e88]:info2:Sending 'aop_config_ab' (15 KB)                    OKAY [  0.002s]
+[2024-12-14 18:47:48:837:837214  ed5c1e88]:info2:Writing 'aop_config_ab'                            (bootloader) Partition aop_config_a flashed successfully
+[2024-12-14 18:47:48:838:838219  ed5c1e88]:info2:(bootloader) Partition aop_config_b flashed successfully
+[2024-12-14 18:47:48:838:838219  ed5c1e88]:info2:OKAY [  0.003s]
+[2024-12-14 18:47:48:838:838219  ed5c1e88]:info2:Finished. Total time: 0.022s
+[2024-12-14 18:47:48:842:842332  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash tz_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/tz.mbn   || 
+[2024-12-14 18:47:48:982:982920  ed5c1e88]:info2:Sending 'tz_ab' (3852 KB)                          OKAY [  0.103s]
+[2024-12-14 18:47:49:132:132187  ed5c1e88]:info2:Writing 'tz_ab'                                    (bootloader) Partition tz_a flashed successfully
+[2024-12-14 18:47:49:136:136186  ed5c1e88]:info2:(bootloader) Partition tz_b flashed successfully
+[2024-12-14 18:47:49:141:141189  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash devcfg_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/devcfg.mbn   || 
+[2024-12-14 18:47:49:141:141189  ed5c1e88]:info2:OKAY [  0.152s]
+[2024-12-14 18:47:49:142:142188  ed5c1e88]:info2:Finished. Total time: 0.271s
+[2024-12-14 18:47:49:182:182914  ed5c1e88]:info2:Sending 'devcfg_ab' (55 KB)                        OKAY [  0.003s]
+[2024-12-14 18:47:49:186:186454  ed5c1e88]:info2:Writing 'devcfg_ab'                                (bootloader) Partition devcfg_a flashed successfully
+[2024-12-14 18:47:49:187:187365  ed5c1e88]:info2:(bootloader) Partition devcfg_b flashed successfully
+[2024-12-14 18:47:49:187:187365  ed5c1e88]:info2:OKAY [  0.004s]
+[2024-12-14 18:47:49:188:188367  ed5c1e88]:info2:Finished. Total time: 0.024s
+[2024-12-14 18:47:49:190:190891  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash featenabler_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/featenabler.mbn   || 
+[2024-12-14 18:47:49:235:235355  ed5c1e88]:info2:Sending 'featenabler_ab' (94 KB)                   OKAY [  0.004s]
+[2024-12-14 18:47:49:240:240577  ed5c1e88]:info2:Writing 'featenabler_ab'                           (bootloader) Partition featenabler_a flashed successfully
+[2024-12-14 18:47:49:241:241580  ed5c1e88]:info2:(bootloader) Partition featenabler_b flashed successfully
+[2024-12-14 18:47:49:241:241580  ed5c1e88]:info2:OKAY [  0.006s]
+[2024-12-14 18:47:49:241:241580  ed5c1e88]:info2:Finished. Total time: 0.027s
+[2024-12-14 18:47:49:245:245627  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash hyp_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/hypvmperformance.mbn   || 
+[2024-12-14 18:47:49:328:328383  ed5c1e88]:info2:Sending 'hyp_ab' (1418 KB)                         OKAY [  0.044s]
+[2024-12-14 18:47:49:385:385767  ed5c1e88]:info2:Writing 'hyp_ab'                                   (bootloader) Partition hyp_a flashed successfully
+[2024-12-14 18:47:49:387:387115  ed5c1e88]:info2:(bootloader) Partition hyp_b flashed successfully
+[2024-12-14 18:47:49:387:387115  ed5c1e88]:info2:OKAY [  0.059s]
+[2024-12-14 18:47:49:387:387115  ed5c1e88]:info2:Finished. Total time: 0.119s
+[2024-12-14 18:47:49:390:390119  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash uefi_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/uefi.elf   || 
+[2024-12-14 18:47:49:512:512419  ed5c1e88]:info2:Sending 'uefi_ab' (2875 KB)                        OKAY [  0.080s]
+[2024-12-14 18:47:49:626:626437  ed5c1e88]:info2:Writing 'uefi_ab'                                  (bootloader) Partition uefi_a flashed successfully
+[2024-12-14 18:47:49:627:627402  ed5c1e88]:info2:(bootloader) Partition uefi_b flashed successfully
+[2024-12-14 18:47:49:627:627402  ed5c1e88]:info2:OKAY [  0.115s]
+[2024-12-14 18:47:49:627:627402  ed5c1e88]:info2:Finished. Total time: 0.215s
+[2024-12-14 18:47:49:631:631416  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash uefisecapp_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/uefi_sec.mbn   || 
+[2024-12-14 18:47:49:678:678997  ed5c1e88]:info2:Sending 'uefisecapp_ab' (172 KB)                   OKAY [  0.006s]
+[2024-12-14 18:47:49:686:686767  ed5c1e88]:info2:Writing 'uefisecapp_ab'                            (bootloader) Partition uefisecapp_a flashed successfully
+[2024-12-14 18:47:49:688:688054  ed5c1e88]:info2:(bootloader) Partition uefisecapp_b flashed successfully
+[2024-12-14 18:47:49:688:688054  ed5c1e88]:info2:OKAY [  0.009s]
+[2024-12-14 18:47:49:688:688054  ed5c1e88]:info2:Finished. Total time: 0.033s
+[2024-12-14 18:47:49:691:691474  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash modem_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/NON-HLOS.bin   || 
+[2024-12-14 18:47:59:623:623987  ed5c1e88]:info2:Sending 'modem_ab' (361324 KB)                     OKAY [  9.894s]
+[2024-12-14 18:48:13:600:600775  ed5c1e88]:info2:Writing 'modem_ab'                                 (bootloader) Partition modem_a flashed successfully
+[2024-12-14 18:48:13:819:819837  ed5c1e88]:info2:(bootloader) Partition modem_b flashed successfully
+[2024-12-14 18:48:13:819:819837  ed5c1e88]:info2:OKAY [ 14.197s]
+[2024-12-14 18:48:13:819:819837  ed5c1e88]:info2:Finished. Total time: 24.107s
+[2024-12-14 18:48:13:823:823854  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash bluetooth_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/BTFM.bin   || 
+[2024-12-14 18:48:13:899:899078  ed5c1e88]:info2:Sending 'bluetooth_ab' (1228 KB)                   OKAY [  0.035s]
+[2024-12-14 18:48:13:949:949649  ed5c1e88]:info2:Writing 'bluetooth_ab'                             (bootloader) Partition bluetooth_a flashed successfully
+[2024-12-14 18:48:13:950:950655  ed5c1e88]:info2:(bootloader) Partition bluetooth_b flashed successfully
+[2024-12-14 18:48:13:950:950655  ed5c1e88]:info2:OKAY [  0.052s]
+[2024-12-14 18:48:13:950:950655  ed5c1e88]:info2:Finished. Total time: 0.104s
+[2024-12-14 18:48:13:954:954473  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash dsp_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/dspso.bin   || 
+[2024-12-14 18:48:15:764:764718  ed5c1e88]:info2:Sending 'dsp_ab' (65536 KB)                        OKAY [  1.769s]
+[2024-12-14 18:48:18:352:352296  ed5c1e88]:info2:Writing 'dsp_ab'                                   (bootloader) Partition dsp_a flashed successfully
+[2024-12-14 18:48:18:393:393182  ed5c1e88]:info2:(bootloader) Partition dsp_b flashed successfully
+[2024-12-14 18:48:18:394:394204  ed5c1e88]:info2:OKAY [  2.628s]
+[2024-12-14 18:48:18:394:394204  ed5c1e88]:info2:Finished. Total time: 4.414s
+[2024-12-14 18:48:18:398:398214  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash keymaster_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/keymint.mbn   || 
+[2024-12-14 18:48:18:453:453005  ed5c1e88]:info2:Sending 'keymaster_ab' (396 KB)                    OKAY [  0.011s]
+[2024-12-14 18:48:18:470:470862  ed5c1e88]:info2:Writing 'keymaster_ab'                             (bootloader) Partition keymaster_a flashed successfully
+[2024-12-14 18:48:18:471:471873  ed5c1e88]:info2:(bootloader) Partition keymaster_b flashed successfully
+[2024-12-14 18:48:18:471:471873  ed5c1e88]:info2:OKAY [  0.020s]
+[2024-12-14 18:48:18:471:471873  ed5c1e88]:info2:Finished. Total time: 0.049s
+[2024-12-14 18:48:18:475:475950  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash qupfw_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/qupv3fw.elf   || 
+[2024-12-14 18:48:18:518:518639  ed5c1e88]:info2:Sending 'qupfw_ab' (52 KB)                         OKAY [  0.003s]
+[2024-12-14 18:48:18:522:522493  ed5c1e88]:info2:Writing 'qupfw_ab'                                 (bootloader) Partition qupfw_a flashed successfully
+[2024-12-14 18:48:18:522:522493  ed5c1e88]:info2:(bootloader) Partition qupfw_b flashed successfully
+[2024-12-14 18:48:18:523:523509  ed5c1e88]:info2:OKAY [  0.004s]
+[2024-12-14 18:48:18:523:523509  ed5c1e88]:info2:Finished. Total time: 0.024s
+[2024-12-14 18:48:18:526:526509  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash multiimgoem_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/multi_image.mbn   || 
+[2024-12-14 18:48:18:573:573647  ed5c1e88]:info2:Sending 'multiimgoem_ab' (32 KB)                   OKAY [  0.002s]
+[2024-12-14 18:48:18:576:576934  ed5c1e88]:info2:Writing 'multiimgoem_ab'                           (bootloader) Partition multiimgoem_a flashed successfully
+[2024-12-14 18:48:18:577:577658  ed5c1e88]:info2:(bootloader) Partition multiimgoem_b flashed successfully
+[2024-12-14 18:48:18:577:577658  ed5c1e88]:info2:OKAY [  0.004s]
+[2024-12-14 18:48:18:578:578561  ed5c1e88]:info2:Finished. Total time: 0.028s
+[2024-12-14 18:48:18:581:581673  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash multiimgqti_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/multi_image_qti.mbn   || 
+[2024-12-14 18:48:18:623:623890  ed5c1e88]:info2:Sending 'multiimgqti_ab' (11 KB)                   OKAY [  0.001s]
+[2024-12-14 18:48:18:626:626954  ed5c1e88]:info2:Writing 'multiimgqti_ab'                           (bootloader) Partition multiimgqti_a flashed successfully
+[2024-12-14 18:48:18:627:627967  ed5c1e88]:info2:(bootloader) Partition multiimgqti_b flashed successfully
+[2024-12-14 18:48:18:627:627967  ed5c1e88]:info2:OKAY [  0.004s]
+[2024-12-14 18:48:18:628:628958  ed5c1e88]:info2:Finished. Total time: 0.023s
+[2024-12-14 18:48:18:630:630959  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash cpucp_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/cpucp.elf   || 
+[2024-12-14 18:48:18:675:675816  ed5c1e88]:info2:Sending 'cpucp_ab' (187 KB)                        OKAY [  0.006s]
+[2024-12-14 18:48:18:685:685758  ed5c1e88]:info2:Writing 'cpucp_ab'                                 (bootloader) Partition cpucp_a flashed successfully
+[2024-12-14 18:48:18:687:687173  ed5c1e88]:info2:(bootloader) Partition cpucp_b flashed successfully
+[2024-12-14 18:48:18:687:687173  ed5c1e88]:info2:OKAY [  0.011s]
+[2024-12-14 18:48:18:687:687173  ed5c1e88]:info2:Finished. Total time: 0.034s
+[2024-12-14 18:48:18:691:691503  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash logfs C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/logfs_ufs_8mb.bin   || 
+[2024-12-14 18:48:18:731:731888  ed5c1e88]:info2:Sending 'logfs' (16 KB)                            OKAY [  0.002s]
+[2024-12-14 18:48:18:735:735251  ed5c1e88]:info2:Writing 'logfs'                                    OKAY [  0.003s]
+[2024-12-14 18:48:18:735:735514  ed5c1e88]:info2:Finished. Total time: 0.021s
+[2024-12-14 18:48:18:739:739520  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash rescue C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/rescue.img   || 
+[2024-12-14 18:48:18:782:782033  ed5c1e88]:info2:Sending 'rescue' (40 KB)                           OKAY [  0.002s]
+[2024-12-14 18:48:18:787:787059  ed5c1e88]:info2:Writing 'rescue'                                   OKAY [  0.005s]
+[2024-12-14 18:48:18:787:787564  ed5c1e88]:info2:Finished. Total time: 0.024s
+[2024-12-14 18:48:18:790:790476  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash storsec C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/storsec.mbn   || 
+[2024-12-14 18:48:18:831:831289  ed5c1e88]:info2:Sending 'storsec' (32 KB)                          OKAY [  0.002s]
+[2024-12-14 18:48:18:835:835250  ed5c1e88]:info2:Writing 'storsec'                                  OKAY [  0.004s]
+[2024-12-14 18:48:18:835:835250  ed5c1e88]:info2:Finished. Total time: 0.022s
+[2024-12-14 18:48:18:839:839686  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash toolsfv C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/tools.fv   || 
+[2024-12-14 18:48:18:890:890548  ed5c1e88]:info2:Sending 'toolsfv' (384 KB)                         OKAY [  0.012s]
+[2024-12-14 18:48:18:908:908373  ed5c1e88]:info2:Writing 'toolsfv'                                  OKAY [  0.018s]
+[2024-12-14 18:48:18:908:908373  ed5c1e88]:info2:Finished. Total time: 0.046s
+[2024-12-14 18:48:18:911:911387  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash xbl_ramdump_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/XblRamdump.elf   || 
+[2024-12-14 18:48:18:976:976943  ed5c1e88]:info2:Sending 'xbl_ramdump_ab' (839 KB)                  OKAY [  0.024s]
+[2024-12-14 18:48:19:012:012362  ed5c1e88]:info2:Writing 'xbl_ramdump_ab'                           (bootloader) Partition xbl_ramdump_a flashed successfully
+[2024-12-14 18:48:19:019:019410  ed5c1e88]:info2:(bootloader) Partition xbl_ramdump_b flashed successfully
+[2024-12-14 18:48:19:020:020417  ed5c1e88]:info2:OKAY [  0.042s]
+[2024-12-14 18:48:19:020:020417  ed5c1e88]:info2:Finished. Total time: 0.084s
+[2024-12-14 18:48:19:023:023416  ed5c1e88]:info1:$fastboot -s ed5c1e88 erase imagefv_ab   || 
+[2024-12-14 18:48:19:120:120078  ed5c1e88]:info2:Erasing 'imagefv_ab'                               (bootloader) Partition imagefv_a erase successfully
+[2024-12-14 18:48:19:183:183536  ed5c1e88]:info2:(bootloader) Partition imagefv_b erase successfully
+[2024-12-14 18:48:19:184:184524  ed5c1e88]:info2:OKAY [  0.126s]
+[2024-12-14 18:48:19:184:184524  ed5c1e88]:info2:Finished. Total time: 0.138s
+[2024-12-14 18:48:19:187:187534  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash imagefv_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/imagefv.elf   || 
+[2024-12-14 18:48:19:410:410005  ed5c1e88]:info2:Sending 'imagefv_ab' (6151 KB)                     OKAY [  0.179s]
+[2024-12-14 18:48:19:649:649187  ed5c1e88]:info2:Writing 'imagefv_ab'                               (bootloader) Partition imagefv_a flashed successfully
+[2024-12-14 18:48:19:653:653026  ed5c1e88]:info2:(bootloader) Partition imagefv_b flashed successfully
+[2024-12-14 18:48:19:654:654042  ed5c1e88]:info2:OKAY [  0.243s]
+[2024-12-14 18:48:19:654:654042  ed5c1e88]:info2:Finished. Total time: 0.442s
+[2024-12-14 18:48:19:657:657240  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash init_boot_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/init_boot.img   || 
+[2024-12-14 18:48:19:911:911714  ed5c1e88]:info2:Sending 'init_boot_ab' (8192 KB)                   OKAY [  0.215s]
+[2024-12-14 18:48:20:231:231413  ed5c1e88]:info2:Writing 'init_boot_ab'                             (bootloader) Partition init_boot_a flashed successfully
+[2024-12-14 18:48:20:236:236407  ed5c1e88]:info2:(bootloader) Partition init_boot_b flashed successfully
+[2024-12-14 18:48:20:237:237411  ed5c1e88]:info2:OKAY [  0.325s]
+[2024-12-14 18:48:20:237:237411  ed5c1e88]:info2:Finished. Total time: 0.556s
+[2024-12-14 18:48:20:240:240407  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash super C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/super.img   || 
+[2024-12-14 18:49:00:710:710675  ed5c1e88]:info2:Sending sparse 'super' 1/11 (730676 KB)            OKAY [ 19.958s]
+[2024-12-14 18:49:00:720:720677  ed5c1e88]:info2:Writing 'super'                                    OKAY [  0.010s]
+[2024-12-14 18:49:20:740:740040  ed5c1e88]:info2:Sending sparse 'super' 2/11 (740148 KB)            OKAY [ 20.019s]
+[2024-12-14 18:49:30:712:712526  ed5c1e88]:info2:Writing 'super'                                    OKAY [  9.971s]
+[2024-12-14 18:49:50:148:148564  ed5c1e88]:info2:Sending sparse 'super' 3/11 (720896 KB)            OKAY [ 19.436s]
+[2024-12-14 18:50:01:303:303160  ed5c1e88]:info2:Writing 'super'                                    OKAY [ 11.155s]
+[2024-12-14 18:50:20:802:802714  ed5c1e88]:info2:Sending sparse 'super' 4/11 (720896 KB)            OKAY [ 19.500s]
+[2024-12-14 18:50:30:750:750274  ed5c1e88]:info2:Writing 'super'                                    OKAY [  9.948s]
+[2024-12-14 18:50:50:388:388985  ed5c1e88]:info2:Sending sparse 'super' 5/11 (720896 KB)            OKAY [ 19.638s]
+[2024-12-14 18:51:00:350:350875  ed5c1e88]:info2:Writing 'super'                                    OKAY [  9.963s]
+[2024-12-14 18:51:19:830:830540  ed5c1e88]:info2:Sending sparse 'super' 6/11 (720896 KB)            OKAY [ 19.478s]
+[2024-12-14 18:51:29:968:968281  ed5c1e88]:info2:Writing 'super'                                    OKAY [ 10.138s]
+[2024-12-14 18:51:49:653:653560  ed5c1e88]:info2:Sending sparse 'super' 7/11 (730564 KB)            OKAY [ 19.685s]
+[2024-12-14 18:51:59:577:577346  ed5c1e88]:info2:Writing 'super'                                    OKAY [  9.924s]
+[2024-12-14 18:52:19:787:787684  ed5c1e88]:info2:Sending sparse 'super' 8/11 (751280 KB)            OKAY [ 20.210s]
+[2024-12-14 18:52:29:396:396095  ed5c1e88]:info2:Writing 'super'                                    OKAY [  9.608s]
+[2024-12-14 18:52:49:554:554431  ed5c1e88]:info2:Sending sparse 'super' 9/11 (749216 KB)            OKAY [ 20.157s]
+[2024-12-14 18:53:01:047:047780  ed5c1e88]:info2:Writing 'super'                                    OKAY [ 11.493s]
+[2024-12-14 18:53:20:622:622646  ed5c1e88]:info2:Sending sparse 'super' 10/11 (723000 KB)           OKAY [ 19.574s]
+[2024-12-14 18:53:31:978:978297  ed5c1e88]:info2:Writing 'super'                                    OKAY [ 11.355s]
+[2024-12-14 18:53:44:433:433909  ed5c1e88]:info2:Sending sparse 'super' 11/11 (461376 KB)           OKAY [ 12.457s]
+[2024-12-14 18:54:02:020:020335  ed5c1e88]:info2:Writing 'super'                                    OKAY [ 17.586s]
+[2024-12-14 18:54:02:021:021348  ed5c1e88]:info2:Finished. Total time: 341.757s
+[2024-12-14 18:54:02:024:024507  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash vendor_boot_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/vendor_boot.img   || 
+[2024-12-14 18:54:04:731:731739  ed5c1e88]:info2:Sending 'vendor_boot_ab' (98304 KB)                OKAY [  2.649s]
+[2024-12-14 18:54:24:966:966888  ed5c1e88]:info2:Writing 'vendor_boot_ab'                           (bootloader) Partition vendor_boot_a flashed successfully
+[2024-12-14 18:54:25:029:029875  ed5c1e88]:info2:(bootloader) Partition vendor_boot_b flashed successfully
+[2024-12-14 18:54:25:029:029875  ed5c1e88]:info2:OKAY [ 20.298s]
+[2024-12-14 18:54:25:030:030890  ed5c1e88]:info2:Finished. Total time: 22.980s
+[2024-12-14 18:54:25:032:032895  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash dtbo_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/dtbo.img   || 
+[2024-12-14 18:54:25:513:513250  ed5c1e88]:info2:Sending 'dtbo_ab' (16384 KB)                       OKAY [  0.444s]
+[2024-12-14 18:54:26:159:159819  ed5c1e88]:info2:Writing 'dtbo_ab'                                  (bootloader) Partition dtbo_a flashed successfully
+[2024-12-14 18:54:26:168:168430  ed5c1e88]:info2:(bootloader) Partition dtbo_b flashed successfully
+[2024-12-14 18:54:26:168:168430  ed5c1e88]:info2:OKAY [  0.656s]
+[2024-12-14 18:54:26:169:169195  ed5c1e88]:info2:Finished. Total time: 1.116s
+[2024-12-14 18:54:26:171:171201  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash vbmeta_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/vbmeta.img   || 
+[2024-12-14 18:54:26:212:212359  ed5c1e88]:info2:Sending 'vbmeta_ab' (8 KB)                         OKAY [  0.001s]
+[2024-12-14 18:54:26:215:215261  ed5c1e88]:info2:Writing 'vbmeta_ab'                                (bootloader) Partition vbmeta_a flashed successfully
+[2024-12-14 18:54:26:215:215261  ed5c1e88]:info2:(bootloader) Partition vbmeta_b flashed successfully
+[2024-12-14 18:54:26:215:215261  ed5c1e88]:info2:OKAY [  0.003s]
+[2024-12-14 18:54:26:216:216264  ed5c1e88]:info2:Finished. Total time: 0.021s
+[2024-12-14 18:54:26:219:219723  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash vbmeta_system_ab C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/vbmeta_system.img   || 
+[2024-12-14 18:54:26:261:261385  ed5c1e88]:info2:Sending 'vbmeta_system_ab' (4 KB)                  OKAY [  0.001s]
+[2024-12-14 18:54:26:264:264018  ed5c1e88]:info2:Writing 'vbmeta_system_ab'                         (bootloader) Partition vbmeta_system_a flashed successfully
+[2024-12-14 18:54:26:264:264018  ed5c1e88]:info2:(bootloader) Partition vbmeta_system_b flashed successfully
+[2024-12-14 18:54:26:264:264018  ed5c1e88]:info2:OKAY [  0.003s]
+[2024-12-14 18:54:26:265:265023  ed5c1e88]:info2:Finished. Total time: 0.023s
+[2024-12-14 18:54:26:268:268527  ed5c1e88]:info1:$fastboot -s ed5c1e88 erase metadata   || 
+[2024-12-14 18:54:26:371:371759  ed5c1e88]:info2:Erasing 'metadata'                                 OKAY [  0.068s]
+[2024-12-14 18:54:26:371:371759  ed5c1e88]:info2:Finished. Total time: 0.079s
+[2024-12-14 18:54:26:375:375772  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash metadata C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/metadata.img   || 
+[2024-12-14 18:54:26:477:477802  ed5c1e88]:info2:Sending 'metadata' (2184 KB)                       OKAY [  0.058s]
+[2024-12-14 18:54:26:950:950285  ed5c1e88]:info2:Writing 'metadata'                                 OKAY [  0.472s]
+[2024-12-14 18:54:26:951:951173  ed5c1e88]:info2:Finished. Total time: 0.552s
+[2024-12-14 18:54:26:955:955200  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash userdata C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/userdata.img   || 
+[2024-12-14 18:54:27:101:101524  ed5c1e88]:info2:Sending 'userdata' (3860 KB)                       OKAY [  0.102s]
+[2024-12-14 18:54:27:109:109854  ed5c1e88]:info2:Writing 'userdata'                                 OKAY [  0.009s]
+[2024-12-14 18:54:27:109:109854  ed5c1e88]:info2:Finished. Total time: 0.134s
+[2024-12-14 18:54:27:113:113869  ed5c1e88]:info1:$fastboot -s ed5c1e88 flash cust C:\nuwa_images_OS1.0.2.0.UMBCNXM_14.0_cn_chinatelecom\images/cust.img   || 
+[2024-12-14 18:59:27:689:689652  ed5c1e88]:error: flash timeout1216
+[2024-12-14 18:59:27:689:689652  ed5c1e88]:timeout kill cmd: 1216

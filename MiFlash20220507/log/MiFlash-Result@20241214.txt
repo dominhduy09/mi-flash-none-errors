@@ -1,0 +1,2 @@
+[6:59:28 PM]:1    ed5c1e88     700.3372361s     error: flash timeout1216
+[7:12:12 PM]:1    ed5c1e88     480.6018541s     error:Not catch checkpoint (\$fastboot -s .* lock),flash is not done

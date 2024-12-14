@@ -1,0 +1,148 @@
+[5:57:04 PM]:open RegistryKey Software\XiaoMi\MiFlash\
+[5:57:04 PM]:create RegistryKey Software\XiaoMi\MiFlash\
+[2024-12-14 17:57:28:810:810992]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 17:57:28:891:891309]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 17:57:41:276:276279]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 17:57:41:323:323930]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 17:58:01:660:660098]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 17:58:01:705:705259]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 17:58:07:291:291863]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 17:58:07:336:336990]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 17:58:25:244:244737]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 17:58:25:290:290382]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 17:58:28:076:076829]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 17:58:28:122:122536]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 17:58:28:258:258950]:dl not exit ffufilelist
+[2024-12-14 18:05:03:488:488006]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 18:05:03:533:533142]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 18:05:03:669:669295]:add device ed5c1e88 index 1
+[2024-12-14 18:05:07:976:976476]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 18:05:08:019:019670]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 18:05:13:122:122676]:Object reference not set to an instance of an object.    at XiaoMiFlash.code.Utility.UsbDevice.GetAndroidDevices(TreeViewUsbItem item, List`1& outItems)
+[2024-12-14 18:05:13:179:179084]:FlashingDevice.flashDeviceList.Remove ed5c1e88
+[2024-12-14 18:05:13:187:187571]:dl not exit ffufilelist
+[2024-12-14 18:05:41:489:489543]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 18:05:41:536:536169]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 18:05:44:319:319209]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 18:05:44:364:364188]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 18:06:52:664:664121]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 18:06:52:710:710210]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 18:06:58:822:822002]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 18:06:58:868:868994]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 18:07:01:480:480025]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 18:07:01:526:526109]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 18:07:01:658:658924]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 18:07:01:703:703499]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 18:07:02:559:559491]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 18:07:02:606:606460]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 18:07:03:071:071619]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 18:07:03:116:116932]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 18:07:03:398:398826]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 18:07:03:446:446612]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 18:07:03:728:728048]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 18:07:03:772:772036]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 18:07:04:880:880072]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 18:07:04:924:924251]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 18:07:05:167:167520]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 18:07:05:212:212623]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 18:07:13:513:513343]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 18:07:13:558:558680]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 18:07:15:129:129605]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 18:07:15:176:176999]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 18:07:15:902:902250]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 18:07:15:946:946118]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 18:07:17:032:032517]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 18:07:17:076:076080]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 18:07:17:201:201136]:dl not exit ffufilelist
+[2024-12-14 18:07:22:136:136210]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 18:07:22:185:185347]:ls ubs :Communications Port (COM1)
+
+[6:07:31 PM]:open RegistryKey Software\XiaoMi\MiFlash\
+[2024-12-14 18:07:41:601:601321]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 18:07:41:637:637289]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 18:47:44:767:767738]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 18:47:44:813:813205]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 18:47:44:989:989071]:add device ed5c1e88 index 1
+[2024-12-14 18:47:47:472:472483]:lsusb path:"C:\Users\Admin\Downloads\MiFlash20220507\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 18:47:47:516:516205]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 18:47:47:652:652612]:FlashingDevice.flashDeviceList.Remove ed5c1e88
+[2024-12-14 18:47:47:658:658004]:add device ed5c1e88 index 1
+[2024-12-14 18:47:47:663:663920]:dl not exit ffufilelist
+[2024-12-14 18:47:47:667:667498]:Thread start,thread id 9,thread name ed5c1e88
+[2024-12-14 18:47:47:691:691973]:start process id 1216 name cmd
+[2024-12-14 18:59:28:009:009208]:Thread stopped, thread id 9, thread name ed5c1e88
+[2024-12-14 19:00:46:228:228288]:lsusb path:"C:\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 19:00:46:294:294080]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 19:01:03:363:363396]:lsusb path:"C:\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 19:01:03:407:407757]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 19:01:26:336:336026]:lsusb path:"C:\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 19:01:26:383:383086]:ls ubs :Communications Port (COM1)
+
+[7:01:32 PM]:open RegistryKey Software\XiaoMi\MiFlash\
+[2024-12-14 19:02:06:072:072447]:lsusb path:"C:\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 19:02:06:121:121111]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 19:02:08:552:552412]:lsusb path:"C:\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 19:02:08:594:594935]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 19:03:27:634:634116]:lsusb path:"C:\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 19:03:27:798:798205]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 19:03:53:417:417993]:lsusb path:"C:\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 19:03:53:528:528686]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 19:03:53:824:824323]:add device ed5c1e88 index 1
+[2024-12-14 19:04:03:374:374098]:lsusb path:"C:\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 19:04:03:421:421302]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 19:04:03:563:563435]:FlashingDevice.flashDeviceList.Remove ed5c1e88
+[2024-12-14 19:04:03:571:571941]:add device ed5c1e88 index 1
+[2024-12-14 19:04:09:257:257973]:lsusb path:"C:\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 19:04:09:312:312611]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 19:04:09:466:466447]:FlashingDevice.flashDeviceList.Remove ed5c1e88
+[2024-12-14 19:04:09:467:467452]:add device ed5c1e88 index 1
+[2024-12-14 19:04:11:513:513489]:lsusb path:"C:\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 19:04:11:569:569579]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 19:04:11:726:726498]:FlashingDevice.flashDeviceList.Remove ed5c1e88
+[2024-12-14 19:04:11:728:728529]:add device ed5c1e88 index 1
+[2024-12-14 19:04:11:735:735137]:dl not exit ffufilelist
+[2024-12-14 19:04:11:739:739196]:Thread start,thread id 13,thread name ed5c1e88
+[2024-12-14 19:04:11:771:771827]:start process id 6164 name cmd
+[2024-12-14 19:04:15:351:351595]:lsusb path:"C:\MiFlash20220507\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2024-12-14 19:04:15:401:401523]:ls ubs :Communications Port (COM1)
+
+[2024-12-14 19:04:18:734:734991]:Dulicate device ed5c1e88
+[2024-12-14 19:04:18:738:738168]:dl not exit ffufilelist
+[2024-12-14 19:04:18:739:739170]:ed5c1e88 already in flashing
+[2024-12-14 19:12:12:341:341181]:Thread stopped, thread id 13, thread name ed5c1e88
